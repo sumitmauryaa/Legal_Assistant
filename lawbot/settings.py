@@ -38,7 +38,20 @@ if _debug_env is None:
     DEBUG = True
 else:
     DEBUG = str(_debug_env).lower() in ('1', 'true', 'yes', 'on')
-ALLOWED_HOSTS =  ["legalai.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    'legal-assistant-c2qx.onrender.com',
+    'ai-legal-assistant-6ibx.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://legal-assistant-c2qx.onrender.com',
+    'https://ai-legal-assistant-6ibx.onrender.com',
+    'http://127.0.0.1:8000',
+    'http://localhost:8000'
+]
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
